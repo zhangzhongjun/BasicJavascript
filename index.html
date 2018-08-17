@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<link rel='stylesheet' type='text/css' href='./css/table.css'></link>
+		<style type='text/css'>
+			*{
+				margin:0;
+				padding:0;
+				border:0;
+			}
+			body{
+				font-size:14px;
+			}
+			h3{
+				color:blue
+			}
+		</style>
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $("p").click(function(){
+				$(this).hide();
+			  });
+			});
+		</script>
+	</head>
+	<body>
+	呼。。。<br>终于搞完了，感谢两位美丽非凡，法力无边， <span style="text-decoration:line-through;">力大无穷</span>的小仙女带我起飞，感谢各位师兄师姐的指导，感谢赵老哥的慰问餐。。。<br>嗯，当然，我才是那个最胖的
+		<header>
+			<h1>Welcome to my homepage</h1>
+			<p>My name is Donald Duck</p>
+		</header>
+		<p>If you click on me, I will disappear.</p>
+		<h3>jQuery可以实现：</h3>
+		<ol>
+			<li>HTML 元素选取</li>
+			<li>HTML 元素操作</li>
+			<li>CSS 操作</li>
+			<li>HTML 事件函数</li>
+			<li>JavaScript 特效和动画</li>
+			<li>HTML DOM 遍历和修改</li>
+			<li>AJAX</li>
+			<li>Utilities</li>
+		</ol>
+		<h3>jQuery的两种不同形式</h3>
+		<table class='dataintable'>
+			<tr>
+				<td>jquery-3.2.1.js</td>
+				<td>未压缩的版本，供调试或者阅读</td>
+			</tr>
+			<tr>
+				<td>jquery-3.2.1.min.js</td>
+				<td>精简版本</td>
+			</tr>
+		</table>
+		<h3>Jquery获取元素的四种途径，是XPath和CSS选择器语法的组合</h3>
+		<table class='dataintable'>
+			<tr>
+				<td>$(this).hide()</td>
+				<td>演示 jQuery hide() 函数，隐藏当前的 HTML 元素</td>
+			</tr>
+			<tr>
+				<td>$("#test").hide()</td>
+				<td>演示 jQuery hide() 函数，隐藏 id="test" 的元素</td>
+			</tr>
+			<tr>
+				<td>$("p").hide()</td>
+				<td>演示 jQuery hide() 函数，隐藏所有元素</td>
+			</tr>
+			<tr>
+				<td>$(".test").hide()</td>
+				<td>演示 jQuery hide() 函数，隐藏所有 class="test" 的元素</td>
+			</tr>
+		</table>
+		<h3>jQuery元素选择器</h3>
+		<table class='dataintable'>
+			<tr>
+				<td>$("p")</td>
+				<td>选取p元素</td>
+			</tr>
+			<tr>
+				<td>$("p.intro")</td>
+				<td>选取所有class='intro'的p元素</td>
+			</tr>
+			<tr>
+				<td>$("p#demo")</td>
+				<td>选取所有id='demo'的p元素</td>
+			</tr>
+		</table>
+		<h3>jQuery属性选择器</h3>
+		<table class='dataintable'>
+			<tr>
+				<td>$("[href]")</td>
+				<td>选取所有带href属性的元素</td>
+			</tr>
+			<tr>
+				<td>$("[href='#']")</td>
+				<td>选取所有带href属性，且href='#'的元素</td>
+			</tr>
+			<tr>
+				<td>$("[href!='#']")</td>
+				<td>选取所有带href属性，且href!='#'的元素</td>
+			</tr>
+			<tr>
+				<td>$("[href$='.jpg']")</td>
+				<td>选取所有带href属性，且href值以".jpg"结尾的元素</td>
+			</tr>
+		</table>
+		<h3>jQuery CSS选择器 用于修改HTML元素的CSS属性</h3>
+		<table class='dataintable'>
+			<tr>
+				<td>$("p").css("background-color","red")</td>
+				<td>可以将所有的p元素的背景颜色修改为红色</td>
+			</tr>
+		</table>
+		<table class="dataintable">
+			<tbody>
+				<tr>
+					<th>语法</th>
+					<th>描述</th>
+				</tr>
+				<tr>
+					<td>$(this)</td>
+					<td>当前 HTML 元素</td>
+				</tr>
+				<tr>
+					<td>$("p")</td>
+					<td>所有 &lt;p&gt; 元素</td>
+				</tr>
+				<tr>
+					<td>$("p.intro")</td>
+					<td>所有 class="intro" 的 &lt;p&gt; 元素</td>
+				</tr>
+				<tr>
+					<td>$(".intro")</td>
+					<td>所有 class="intro" 的元素</td>
+				</tr>
+				<tr>
+					<td>$("#intro")</td>
+					<td>id="intro" 的元素</td>
+				</tr>
+				<tr>
+					<td>$("ul li:first")</td>
+					<td>每个 &lt;ul&gt; 的第一个 &lt;li&gt; 元素</td>
+				</tr>
+				<tr>
+					<td>$("[href$='.jpg']")</td>
+					<td>所有带有以 ".jpg" 结尾的属性值的 href 属性</td>
+				</tr>
+				<tr>
+					<td>$("div#intro .head")</td>
+					<td>id="intro" 的 &lt;div&gt; 元素中的所有 class="head" 的元素</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>下面是一些jQuery事件</h3>
+		<table class="dataintable">
+			<tbody>
+				<tr>
+					<th>Event 函数</th>
+					<th>绑定函数至</th>
+				</tr>
+				<tr>
+					<td>$(document).ready(function)</td>
+					<td>将函数绑定到文档的就绪事件（当文档完成加载时）</td>
+				</tr>
+				<tr>
+					<td>$(selector).click(function)</td>
+					<td>触发或将函数绑定到被选元素的点击事件</td>
+				</tr>
+				<tr>
+					<td>$(selector).dblclick(function)</td>
+					<td>触发或将函数绑定到被选元素的双击事件</td>
+				</tr>
+				<tr>
+					<td>$(selector).focus(function)</td>
+					<td>触发或将函数绑定到被选元素的获得焦点事件</td>
+				</tr>
+				<tr>
+					<td>$(selector).mouseover(function)</td>
+					<td>触发或将函数绑定到被选元素的鼠标悬停事件</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html> 

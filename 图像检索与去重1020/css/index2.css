@@ -1,0 +1,142 @@
+/* */
+body{
+	//background-color: pink;
+}
+/*最上层*/
+.top{
+	//background-color: blue;
+	height: 160px;
+	width: 2000px;
+}
+/*哈哈识图*/
+.logo{
+	height: 80px;
+	line-height: 80px;
+	width: 200px;	
+	text-align:center;
+	//background-color: brown;
+	margin: auto;
+	margin-top: 40px;
+	margin-left: 120px;	
+	font-size: 20px;
+	float: left;
+}
+#haha{
+	font-size: 24px;
+}
+/*右上角图像上传*/
+.uploadimg{
+	//background-color: brown;
+	height: 80px;
+	line-height: 80px;
+	width: 200px;
+	text-align:center;
+	float: left;
+	margin-top: 40px;
+	margin-left: 980px;
+	
+}
+/*图像上传按钮*/
+#upload1{
+	position: relative;
+	display: inline-block;
+	//background: black;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 4px 12px;
+	overflow: hidden;
+	color: #1E88C7;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+}
+/*界面欢迎词*/
+.biaoti{
+	//background-color: brown;
+	height: 130px;
+	line-height: 130px;
+	width: 400px;
+	margin-left: 600px;
+}
+/*欢迎词段落一*/
+#fubiaoti{
+	font-size: 25px;
+}
+/*上传检索*/
+.uploadsearch{
+	//background-color: mediumseagreen;
+	height: 160px;
+	line-height: 160px;
+	width: 500px;
+	margin-left: 550px;
+}
+.chooseimg{
+	float: left;
+	//background-color:black;
+	width: 80px;
+	text-align:center;
+	position: relative;
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 4px 10px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    border-radius: 4px;
+    color: #333;
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: 65px;
+
+}
+.chooseimg input {
+	float: left;
+	position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.showFileName{
+	float: left;
+	//background-color:black;
+	width: 150px;
+	color: #1E88C7;	
+	margin-left: 40px;
+
+}
+.search{
+	float: right;
+	//background-color:black;
+	width: 150px;
+	text-align:center;	
+}
+#dianjisousuo{
+	/*background: #D0EEFF;*/
+	//background:black;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 4px 12px;
+	overflow: hidden;
+	color: #1E88C7;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+}
+.userimg{
+	height: 325px;
+	width: 300px;
+	//background-color: burlywood;
+	float: left;
+	margin-left: 100px;
+}
+.similiarimg{
+	height: 325px;
+	width: 1100px;
+	//background-color: burlywood;
+	float: right;
+}
+.name{
+	
+}

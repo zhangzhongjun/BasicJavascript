@@ -1,0 +1,36 @@
+<html>
+	   <head>
+				   <title>03 ——借助Jquery实现html中a标签的禁用</title>
+				   <meta content="text/html; charset=GB2312" http-equiv="Content-Type">
+				   <script type="text/javascript" src="./js/jquery-3.2.1.js"></script>
+				                                   <style type="text/css">
+                                              body {
+                                                      font: 12px/1.5 \5B8B\4F53, Georgia, Times New Roman, serif, arial;
+                                              }
+                                             a {
+                                                      text-decoration: none;
+                                                      outline: 0 none;
+                                             }
+                                            .disableCss {
+                                                      color: #afafaf;
+                                                      cursor: default
+                                             }
+                               </style>
+				   <script type="text/javascript">
+								$(function() {
+											 $('.disableCss').removeAttr('href');//去掉a标签中的href属性
+											 $('.disableCss').removeAttr('onclick');//去掉a标签中的onclick事件
+											 $(".disableCss").css("font","12px/1.5 \\5B8B\\4F53, Georgia, Times New Roman, serif, arial");
+											 $(".disableCss").css("text-decoration","none");
+											 $(".disableCss").css("color","#afafaf");
+											 $(".disableCss").css("outline","0 none");
+											 $(".disableCss").css("cursor","default");
+							  });
+				  </script>
+		 </head>
+		 <body>
+				 <a class="disableCss" href="http://www.baidu.com/">百度</a>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <a class="disableCss" href="#" onclick="javascript:alert('你好！！！');">点击</a>
+		</body>
+</html>

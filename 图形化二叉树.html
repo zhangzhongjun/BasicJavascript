@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+  <head>
+    <meta charset="utf-8" />
+    <title>node</title>
+    <style>
+          body {
+                position:absolute;  
+          }
+      pre { margin-left: 15px !important } 
+          #pop{
+                  position:absolute;
+                  left:0px;
+                  top :0px;
+                  width:200px;
+                  height:280px;
+ 
+                  border-radius:10px;
+                  border:solid 5px #333;
+                  padding:10px;
+                  font-size:10px;
+                  background:#999;
+                  overflow:hidden;
+                  display:none;
+                  z-index:100;
+          }
+          table{
+                  width:100%;
+                  height:100%;  
+          }
+          table tr td:nth-child(1){
+                  width:50%;
+                   
+          }
+          table tr td:nth-child(2){
+                  font-weight:bold;
+                  color:#F00;  
+          }
+          b {
+                  color:#F00  ;
+          }
+	</style>
+
+  </head>
+  <body>
+    <canvas id="c" width="3440" height="800" style="border:1px solid #ccc"></canvas>
+    <div id="pop">
+      <table>
+        <tr>
+          <td>res_no:</td>
+          <td>
+            <span id="p1"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>res_type:</td>
+          <td>
+            <span id="p2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>parent_element:</td>
+          <td>
+            <span id="p3"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>left_p:</td>
+          <td>
+            <span id="p4"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>rigth_p:</td>
+          <td>
+            <span id="p5"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>left_s:</td>
+          <td>
+            <span id="p6"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>right_s:</td>
+          <td>
+            <span id="p7"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>child_s:</td>
+          <td>
+            <span id="p8"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>bmlm_base:</td>
+          <td>
+            <span id="p9"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>level:</td>
+          <td>
+            <span id="p10"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

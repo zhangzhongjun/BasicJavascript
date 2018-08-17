@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导航条</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 70px; /*有顶部固定导航条时设置*/
+        }
+    </style>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+　 　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#nav_btn_right">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-header">
+        　 <img class="navbar-img" src="../img/logo_tran@50px.png">
+    </div>
+    <form action="##" class="navbar-form navbar-left" rol="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入关键词"/>
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+    </form>
+    <div class="navbar-right collapse navbar-collapse navbar-responsive-collapse" id="nav_btn_right">
+        <ul class="nav navbar-nav">
+            <li><button type="button" class="btn btn-default " data-toggle="collapse">上传文件</button></li>
+            <li><button type="button" class="btn btn-default  " data-toggle="collapse">退出</button></li>
+        </ul>
+    </div>
+</div>
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+<script src="../jquery/jquery-3.2.1.min.js"></script>
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

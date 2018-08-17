@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="bootstrap-3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+</head>
+<body style="padding: 0;margin:0;background: #dddddd; background-size: 100%">
+<div class="container" style="padding-right: 50px;padding-left: 50px; ">
+    <div class="" style="width: 100%;height: 150px; ">
+        <div class="logo" style="float: left; width: 200px;  ">wwwww</div>
+        <div style="float: right">
+            <button>图像上传</button>
+        </div>
+    </div>
+    <div style="clear: both; text-align:center; width: 100%; height: 200px">
+        <h1>搜索</h1>
+        <div style="text-align: center">
+            <form method="post" id="uploadimg" enctype="multipart/form-data">
+                <div class="chooseimg">
+                    <a> <input type="file" name="choose" id="choose"></a>
+                </div>
+                <div class="showFileName"></div>
+                <div class="search">
+                    <button class="btn" type="submit" id="dianjisousuo">搜索</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div style="padding: 0px;" class="row">
+        <div class="img1" style="float: left;width: 300px;">
+            <span>上传图片为：</span>
+            <div style="height: 300px; ">
+                <img src="img/bg.jpg" width="200px" height="200px">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="img2">
+            <span>相似图片为：</span>
+        </div>
+        <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px"> <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px"> <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px"> <img src="img/bg.jpg" width="200px" height="200px">
+        <img src="img/bg.jpg" width="200px" height="200px">
+    </div>
+</div>
+
+<script type="text/javascript">
+    options = ({
+        method: "POST",
+        url: "/PrivacyProtectProxy/addIndex",
+        beforeSubmit: function () {
+            return true
+        },
+        success: function (data, textStatus, jqXHR) {
+            console.log(data)
+            console.log(textStatus)
+            console.log(jqXHR)
+        }
+    })
+    $(document).ready(function () {
+        //将ajax请求和表单联系在一起
+        $("#uploadimg").ajaxForm(options)
+    });
+</script>
+</body>
+</html>

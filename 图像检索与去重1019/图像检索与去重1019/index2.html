@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" rel="stylesheet"/>
+    <link href="css/xcConfirm.css" rel="stylesheet"/>
+    <link href="css/templatemo-style.css" rel="stylesheet"/>
+    <link href="css/owl-carousel.css" rel="stylesheet"/>
+    <!--<link href="css/normalize.css" rel="stylesheet" />-->
+    <link href="css/index2.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="top">
+    <div class="logo">
+        <p class="logoword"><strong id="haha">哈&nbsp哈&nbsp</strong>识&nbsp图</p>
+    </div>
+    <div class="uploadimg">
+        <button class="btn" type="button" id="upload1">图像上传</button>
+    </div>
+</div>
+
+<div class="biaoti">
+    <p class="text-center" id="fubiaoti">
+        在这里分享、搜索你想要的图像
+    </p>
+</div>
+
+<div class="uploadsearch">
+    <form method="post" id="uploadimg" enctype="multipart/form-data">
+        <div class="chooseimg">
+            <a>选择文件 <input type="file" name="choose" id="choose"></a>
+        </div>
+        <div class="showFileName"></div>
+        <div class="search">
+            <button class="btn" type="button" id="dianjisousuo">搜索</button>
+        </div>
+    </form>
+
+</div>
+
+<div class="userimg">
+    <p class="name">
+        上传图片为：
+    </p>
+</div>
+
+<div class="similiarimg">
+    <p class="similiar">
+        相似图像为:
+    <hr/>
+    <table class="tab-file" id="fileTable">
+        <thead>
+        <tr id="tableHeader">
+            <th></th>
+        <tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </p>
+</div>
+<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/xcConfirm.js"></script>
+<script type="text/javascript">
+    $(".chooseimg").on("change", "input[type='file']", function () {
+        var filePath = $(this).val();
+        if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1) {
+            $(".fileerrorTip").html("").hide();
+            var arr = filePath.split('\\');
+            var fileName = arr[arr.length - 1];
+            $(".showFileName").html(fileName);
+        } else {
+            $(".showFileName").html("");
+            $(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
+            return false
+        }
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //跳转文件上传页面
+        $("#upload1").on("click", function () {
+            console.log("upload1")
+            //window.location.href = "/index/?account=" + account;
+            window.location.href = "upload.html";
+        });
+        //将form和ajax请求绑定
+        $("#uploadimg").ajaxSubmit(options);
+        //点击按钮触发文件上传
+        $("#dianjisousuo").on("click", function () {
+            var upload2 = document.getElementById("upload2")
+            var options = {
+                type: "post",
+                dataType: 'json',
+                success: displayImg,
+            }
+
+            //$.ajax(options);
+            return false;
+
+            //图像上传成功的回调函数
+            function displayImg(data, response) {
+                var Imgs = data;
+                for (var i = 0; i < Imgs.fileNumber; i++) {
+                    var temp = "<tr><td>window.URL.createdObjectURL(Imgs)<td></tr>"
+                }
+                $("#srcing").attr("temp", temp)
+            }
+        });
+    })
+</script>
+
+</body>
+
+</html>

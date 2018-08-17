@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>无标题页</title>
+<script language="javascript" type="text/javascript">
+    var time = 10;
+    function tiaozhuan()
+    {
+        if(time==0)
+            window.location="index.html";
+        document.all.tiao.innerText="注册成功,"+time+"秒后跳转到登陆界面";
+        time--;
+    }
+    setInterval("tiaozhuan()",1000);
+</script>
+</head>
+<body onload="tiaozhuan()">
+    <form id="form1" runat="server">
+    <div>
+        <a href="index.html" id="tiao"></a>
+    </div>
+    </form>
+</body>
+</html>

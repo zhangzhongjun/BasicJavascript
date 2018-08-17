@@ -1,0 +1,26 @@
+<html>
+	<head>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("p").hide();
+			});
+		});
+	</script>
+	</head>
+
+	<body>
+		<!--演示hide()函数，将所有的p标签隐藏-->
+		<h2>This is a heading</h2>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+		<button type="button">Click me</button>
+		
+		<br>
+		<input type="file" id="upload" name="upload" class="field-large"></input>
+		<br>
+		<a href='./php/service.php' download=''>确认下载</a>
+		<a href='http://img.mukewang.com/53eded3b0001db2a06970046.jpg' download=''>确认下载</a>
+	</body>
+</html>
